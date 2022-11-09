@@ -1,5 +1,10 @@
 package com.zipcodewilmington;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+
 /**
  * Created by leon on 1/29/18.
  */
@@ -43,7 +48,8 @@ public class StringArrayUtils {
      * @return true if the array contains the specified `value`
      */ // TODO
     public static boolean contains(String[] array, String value) {
-        return
+        List<String> a = new ArrayList<String>(Arrays.asList(array));
+        return a.contains(value);
 
 
        // return false;
@@ -54,7 +60,9 @@ public class StringArrayUtils {
      * @return an array with identical contents in reverse order
      */ // TODO
     public static String[] reverse(String[] array) {
-        return null;
+        List<String> a = new ArrayList<String>(Arrays.asList(array));
+        Collections.reverse(a);
+        return (a.toArray(new String[0]));
     }
 
     /**
@@ -62,7 +70,7 @@ public class StringArrayUtils {
      * @return true if the order of the array is the same backwards and forwards
      */ // TODO
     public static boolean isPalindromic(String[] array) {
-        return false;
+       return Arrays.equals(array, reverse(array));
     }
 
     /**
