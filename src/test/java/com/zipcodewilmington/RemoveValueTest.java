@@ -11,6 +11,7 @@ public class RemoveValueTest {
         String[] expected = {"quick", "brown", "fox", "jumps", "over", "the", "lazy", "dog"};
         String[] actual = StringArrayUtils.removeValue(array, "The");
         Assert.assertEquals(expected, actual);
+
     }
 
     @Test
@@ -19,6 +20,7 @@ public class RemoveValueTest {
         String[] expected = {"the", "brown", "fox", "jumps", "over", "the", "lazy", "dog"};
         String[] actual = StringArrayUtils.removeValue(array, "quick");
         Assert.assertEquals(expected, actual);
+
     }
 
     @Test
@@ -27,6 +29,7 @@ public class RemoveValueTest {
         String[] expected = {"the", "quick", "fox", "jumps", "over", "the", "lazy", "dog"};
         String[] actual = StringArrayUtils.removeValue(array, "brown");
         Assert.assertEquals(expected, actual);
+
     }
 
 

@@ -112,8 +112,10 @@ public class StringArrayUtils {
      * @return array with identical contents excluding values of `value`
      */ // TODO
     public static String[] removeValue(String[] array, String valueToRemove) {
-        List<String> a = new ArrayList<String>(Arrays.asList(array));
-        return Arrays.(String)asList(valueToRemove);
+        List<String> list = new ArrayList<String>(Arrays.asList(array));
+        list.remove(valueToRemove);
+        array = list.toArray(new String[0]);
+        return array;
     }
 
     /**
@@ -121,7 +123,10 @@ public class StringArrayUtils {
      * @return array of Strings with consecutive duplicates removes
      */ // TODO
     public static String[] removeConsecutiveDuplicates(String[] array) {
-        return null;
+        List<String> list = new ArrayList<String>(Arrays.asList(array));
+        list.remove(re)
+        array = list.toArray(new String[0]);
+        return array;
     }
 
     /**
